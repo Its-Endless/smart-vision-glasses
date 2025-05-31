@@ -1,0 +1,14 @@
+ultralytics
+opencv-python
+pyttsx3
+numpy
+SpeechRecognition
+pyaudio
+face-recognition
+dlib
+tensorflow
+keras
+pillow
+googletrans==4.0.0-rc1
+requests
+flask
