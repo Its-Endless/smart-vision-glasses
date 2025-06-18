@@ -1,0 +1,45 @@
+# Virtual environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# Logs and runtime data
+*.log
+logs/
+*.pid
+
+# Model files and data
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+*.tflite
+*.pt
+*.pth
+*.onnx
+smart_glasses/models/*.yml
+
+# Personal/collected data
+smart_glasses/assets/known_faces/*.jpg
+smart_glasses/assets/known_faces/people.csv
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
+*.swp
+
+# Environment config
+.env

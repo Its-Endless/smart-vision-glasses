@@ -1,4 +1,3 @@
-import speech_recognition as sr
 import pyttsx3
 from mode_manager import ModeManager
 from config import settings
@@ -9,25 +8,11 @@ def speak(text):
     engine.runAndWait()
 
 def listen_for_command():
-    recognizer = sr.Recognizer()
-    mic = sr.Microphone()
-
-    with mic as source:
-        print("Listening for voice command...")
-        speak("Listening for voice command...")
-        recognizer.adjust_for_ambient_noise(source)
-        audio = recognizer.listen(source)
-
-    try:
-        command = recognizer.recognize_google(audio)
-        print(f"You said: {command}")
-        return command
-    except sr.UnknownValueError:
-        print("Sorry, I didn't catch that.")
-        return ""
-    except sr.RequestError:
-        print("Speech recognition service is unavailable.")
-        return ""
+    print("Enter your command:")
+    speak("Enter your command:")
+    command = input()  # Taking text input instead of voice input
+    print(f"You said: {command}")
+    return command
 
 def parse_command(command):
     command = command.lower().strip()
